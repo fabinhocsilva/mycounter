@@ -17,14 +17,14 @@ class MyCounter4 extends StatelessWidget {
           color: Colors.green,
         ),
         Expanded(
-          child: Container(
+          child: SizedBox(
             width: double.infinity,
             height: 200,
             // color: Colors.blue,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                TextApp(dataMy: '123', fontSizeMy: 100),
+                const TextApp(dataMy: '123456', fontSizeMy: 100),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -32,14 +32,16 @@ class MyCounter4 extends StatelessWidget {
                     iconText('Count Up', Icons.arrow_circle_up_rounded),
                   ],
                 ),
-                Container(
+                SizedBox(
                   width: double.infinity,
-
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.amber, shape: StadiumBorder()),
-                    onPressed: () {},
-                    child: Text('Reset', style: TextStyle(fontSize: 60)  ,)
-                  ),
+                      style: ElevatedButton.styleFrom(
+                          primary: Colors.amber, shape: const StadiumBorder()),
+                      onPressed: () {},
+                      child: const Text(
+                        'Reset',
+                        style: TextStyle(fontSize: 60),
+                      )),
                 )
               ],
             ),
@@ -60,7 +62,7 @@ class MyCounter4 extends StatelessWidget {
       // mainAxisAlignment: MainAxisAlignment.center,
       // mainAxisSize: MainAxisSize.min ,
       children: [
-        Container(
+        SizedBox(
           // color: Colors.amber,
           width: 100,
           child: IconButton(
@@ -71,12 +73,12 @@ class MyCounter4 extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         Text(
           data,
-          style: TextStyle(fontSize: 20),
+          style: const TextStyle(fontSize: 20),
         )
       ],
     );
